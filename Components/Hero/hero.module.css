@@ -1,0 +1,132 @@
+.HeroSection {
+    margin-top: 90px;
+    width: 100%;
+    position: relative;
+}
+
+
+.MobileImg {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 240px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 75%);
+}
+
+.HeroCta {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -48%);
+    z-index: 10;
+    row-gap: 20px;
+}
+
+.HeroCta h1 {
+    font-size: clamp(2.4rem, 8vw, 6rem);
+    font-weight: 400;
+    color: #fff;
+}
+
+.HeroCta h1 pre {
+    font-family: 'Delius';
+    text-align: center;
+}
+
+.HeroCta a {
+    font-size: 1rem;
+    font-style: italic;
+    font-family: 500;
+    color: #fff;
+    border: 2px solid #fff;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    letter-spacing: 1.2px;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+@media screen and (min-width: 576px) {
+    .MobileImg {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    .overlay {
+        height: 400px;
+    }
+}
+
+
+@media screen and (min-width: 1025px) {
+    .HeroSection {
+        margin-top: 0px;
+    }
+
+    .MobileImg {
+        display: none;
+    }
+
+    .HeroCta {
+        position: absolute;
+        top: 53%;
+        left: 50%;
+        z-index: 10;
+    }
+
+    .HeroCta h1 {
+        font-weight: 300;
+    }
+
+    .HeroCta a {
+        font-style: italic;
+        font-family: 500;
+        color: #fff;
+        letter-spacing: 1.2px;
+        width: 400px;
+        transition: border 0.5s ease;
+        font-size: 1.4rem;
+    }
+
+    .HeroCta a:hover {
+        border: 2px solid #FABCB4;
+    }
+
+    .parallax {
+        /* background-image: url("/images/hero-img-square.png"); */
+        background-image: url("/images/hero-b.png");
+        min-height: 100vh;
+        background-attachment: fixed;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        min-height: 100%;
+        background-color: rgba(0, 0, 0, 75%);
+    }
+}

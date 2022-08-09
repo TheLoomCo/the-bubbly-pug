@@ -1,0 +1,254 @@
+/* Navigation Styling */
+
+#mobileMenuTrigger {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#mobileMenuTrigger div {
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin: 5px;
+    border-radius: 5px;
+    transition: transform 0.5s ease;
+}
+
+.menuToggle .line1 {
+    transform: rotate(-45deg) translate(-7px, 6px);
+}
+
+.menuToggle .line2 {
+    opacity: 0;
+}
+
+.menuToggle .line3 {
+    transform: rotate(45deg) translate(-5.2px, -4px);
+}
+
+.navbar_style__wrapper {
+    /* width: 100%; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0px;
+    z-index: 100;
+    background-color: #001B26;
+    /* background-color: #000C11; */
+    transition: background-color 0.2s ease;
+    max-width: 1800px;
+    margin: 0px auto;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    font-family: 'Delius';
+}
+
+.nav_logo__desktop {
+    display: none;
+}
+
+.nav_list {
+    display: none;
+    color: #fff;
+}
+
+.active_links {
+    /* display: flex;
+    flex-direction: column; */
+    display: grid;
+    justify-items: center;
+    /* align-content: center; */
+    top: 90px;
+    left: 0px;
+    right: 0px;
+    align-items: center;
+    justify-content: center;
+    background-color: #001B26;
+    row-gap: 50px;
+    font-size: 1.2rem;
+    height: calc(100vh - 90px);
+    overflow-y: scroll;
+    /* width: 100%; */
+    position: absolute;
+    padding-bottom: 40px;
+
+}
+
+/* .active_links li {
+    transform: translateY(-200%);
+} */
+
+.active_links li a {
+    color: #fff;
+}
+
+.nav_list li a {
+    color: #fff;
+    position: relative;
+}
+
+
+
+
+.auth__btn {
+    background-color: rgb(250, 188, 180, 90%);
+    padding: 10px;
+    width: 120px;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Delius';
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    background: linear-gradient(to right, rgb(250, 188, 180, 90%), #fff);
+    background-color: rgb(250, 188, 180, 90%);
+    background-repeat: no-repeat;
+    transition: background-size 0.3s ease;
+}
+
+.AccountDropdown {
+    position: absolute;
+    top: 45px;
+    left: -66px;
+    width: 200px;
+    background-color: #172d35;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    z-index: 999;
+    padding: 22px 0px;
+}
+
+.AccountDropdownHide {
+    display: none;
+}
+
+@media screen and (min-width: 1200px) {
+
+    .AccountDropdown {
+        width: 643px;
+        top: 63px;
+        left: -282px;
+        background-color: #001B26;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        bottom: unset;
+        padding-bottom: 40px;
+        border-radius: 0px 0px 10px 10px;
+        animation: account 0.2s ease forwards;
+    }
+
+    @keyframes account {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+
+
+    .auth__btn {
+        background-size: 5%;
+    }
+
+    .auth__btn:hover {
+        background-size: 100%;
+    }
+
+
+    #mobileMenuTrigger {
+        display: none;
+    }
+
+    .navbar_style__wrapper {
+        padding: 20px 0;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        transition: background-color 0.2s ease;
+        background-color: #001B26;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1600px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0px 40px 0px;
+        position: relative;
+        background: transparent;
+    }
+
+    .logo__container {
+        width: 90px;
+        height: 110px;
+    }
+
+    .nav_logo__mobile {
+        display: none;
+    }
+
+    .nav_logo__desktop {
+        display: block;
+    }
+
+    .nav_list {
+        display: flex;
+        align-items: center;
+        column-gap: 30px;
+        position: relative;
+        font-size: 1.2rem;
+    }
+
+    .nav_list li a {
+        position: relative;
+    }
+
+    .nav_list li a::before {
+        display: inline;
+        content: '';
+        position: absolute;
+        bottom: -7px;
+        left: 2px;
+        width: 0;
+        background-color: #fff;
+        height: 2px;
+        transition: width 0.5s ease;
+    }
+
+    .nav_list li a:hover:before {
+        width: 50px;
+    }
+
+    .nav_list li a.active::before {
+        content: '';
+        position: absolute;
+        bottom: -7px;
+        left: 2px;
+        width: 20%;
+        background-color: #fff;
+        height: 2px;
+        transition: width 0.5s ease;
+    }
+
+    .nav_list li a.active:hover::before {
+        width: 50%;
+    }
+}

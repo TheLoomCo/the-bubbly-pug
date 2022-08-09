@@ -1,0 +1,136 @@
+.pet_profile__section {
+  margin: 100px 0px 80px;
+  padding: 40px 20px;
+  flex: 5;
+}
+
+.pet_profile__header {
+  font-size: clamp(1.8rem, 6vw, 4rem);
+  text-align: center;
+}
+
+/* Header SVG Styling */
+.pet_profile__header path {
+  transform: translateY(30px);
+}
+
+/* Pet Profile Form */
+.pet_profile__form {
+  padding-top: 40px;
+  max-width: 660px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+@media screen and (min-width: 576px) {
+  .pet_profile__form {
+    padding-top: 40px;
+    max-width: 700px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 60px;
+  }
+}
+
+/* General Fieldset Style */
+.pet_profile__form fieldset {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  border: none;
+  width: 100%;
+}
+
+/* General Label Style */
+.pet_profile__label {
+  font-size: 1.2rem;
+}
+
+/* General Input Style */
+.pet_profile__input {
+  border: none;
+  box-shadow: 2px 2px 10px -4px rgb(217, 217, 217);
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-family: 'Delius';
+}
+
+/* Pet Status Select Element */
+.pet_status__select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  box-shadow: 2px 2px 10px -4px rgb(217, 217, 217);
+  padding: 10px;
+  border-radius: 10px;
+  background-color: transparent;
+  cursor: pointer;
+
+}
+
+/* Additional Information Textarea */
+.additional_info {
+  grid-row: 6;
+  grid-column: span 2;
+}
+
+.pet_profile__submit {
+  padding: 8px;
+  border-radius: 12px;
+  border: 2px solid rgba(0, 0, 0, 0.727);
+  background-color: transparent;
+  grid-column: span 2;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+  margin: 0 auto;
+  font-family: 'Delius';
+}
+
+@media screen and (min-width: 576px) {
+  .pet_profile__submit {
+    width: 250px;
+    font-size: 1.2rem;
+  }
+}
+
+/* Pet Profile Image Upload */
+.pet_profile__fieldset {
+  max-width: 430px;
+  width: 98%;
+  position: relative;
+  grid-column: span 2;
+  justify-self: center;
+  margin-bottom: 60px;
+}
+
+.pet_profile__fieldset .pet_profile_image_upload__label {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  border-radius: 10px;
+  background: #fff;
+  border: 2px dashed #c2cdda;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.pet_profile_image_upload__label .text {
+  font-size: 20px;
+  font-weight: 500;
+  color: #5B5B7B;
+  text-align: center;
+  font-family: 'Delius';
+  line-height: 1.7;
+}

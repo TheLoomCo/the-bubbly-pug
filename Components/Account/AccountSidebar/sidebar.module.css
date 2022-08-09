@@ -1,0 +1,35 @@
+.Aside {
+    display: none;
+}
+
+@media screen and (min-width: 1200px) {
+    .Aside {
+        padding-top: 60px;
+        margin-top: 100px;
+        width: 250px;
+        background-color: #001B26;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 40px;
+    }
+
+    .Header {
+        text-align: center;
+    }
+
+    .NavList {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 30px;
+        font-size: 1.2rem;
+        position: relative;
+        z-index: 10;
+    }
+
+    .NavList li a {
+        color: #fff;
+    }
+}
